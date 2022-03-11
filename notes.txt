@@ -1,0 +1,17 @@
+sequence():
+    initialize n*m array, going across increment by 5 (insert/delete), going diagonal increment by 1 (substitution) unless equel then -3 (match)
+    (left delete from left column, right delete from right column)
+    iterating at i=1, j=1 to i=n, j=m
+        compare left, diagonal, and above to find the smallest value
+        store pointer
+
+    return last value as cost
+    traverse back for alignments
+        move diagonal, both have original value
+        move left or up, dash and keep one original
+
+
+sequenceBanded():
+    left = left
+    diagnol = up
+    up = right diagonal
